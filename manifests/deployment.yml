@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: billtthutaopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: billtthutaopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: billtthutaopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: billtthutaopipelinesjavascriptdocker 
+          image: idchelmacr.azurecr.io/billtthutaopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
